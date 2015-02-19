@@ -18,7 +18,7 @@ mainMenu.prototype.buttonPress = function(e){
 	y -= c.offsetTop;
 	
 	if ((x >= 189) && (x <= 416) && (y >= 247) && (y <= 280)){
-		console.log(newGame);
+		screenManager[screenManager.length] = new loadingScreen();
 	}
 	if ((x >= 189) && (x <= 416) && (y >= 323) && (y <= 356)){
 		console.log(controls);
