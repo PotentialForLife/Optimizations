@@ -2,9 +2,9 @@ var newGame = "New Game Button Pressed.";
 var controls = "Controls Button Pressed.";
 var credits = "Credits Button Pressed.";
 var quit = "Quit Button Pressed.";
+var img = document.createElement("img");
 
 function mainMenu(){
-	img = document.createElement("img");
 	img.src = "main_menu copy.png";
 	img.onload = function(){
 		ctx.drawImage(img, 0, 0);
@@ -24,9 +24,16 @@ mainMenu.prototype.buttonPress = function(e){
 		console.log(controls);
 	}
 	if ((x >= 189) && (x <= 416) && (y >= 401) && (y <= 433)){
-		console.log(credits);
+		screenManager[screenManager.length] = new creditsMenu();
 	}
 	if ((x >= 189) && (x <= 416) && (y >= 473) && (y <= 505)){
 		console.log(quit);
 	}
+};
+
+mainMenu.prototype.redrawMenu = function(){
+	img.src = "main_menu copy.png";
+	img.onload = function(){
+		ctx.drawImage(img, 0, 0);
+	};
 };
