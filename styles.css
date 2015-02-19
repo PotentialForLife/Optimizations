@@ -1,9 +1,9 @@
-body{
-	background: #000000;
-}
-
 canvas {
 	margin: auto;
     display: block;
     width: 600px;
+}
+
+body{
+	background: #000000;
 }
