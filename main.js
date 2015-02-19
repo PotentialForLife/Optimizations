@@ -12,4 +12,4 @@ function redraw(){
 	screenManager[screenManager.length - 1].redrawMenu();
 };
 
-setInterval(redraw, 200);
+setInterval(redraw, 100);
